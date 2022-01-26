@@ -1,25 +1,49 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { useState } from 'react';
+import Header from './components/Header';
+import MainSection from './components/MainSection';
+import Modal from './components/Modal';
+import ThanksModal from './components/ThanksModal';
+import './css/styles.css';
 
-function App() {
+const App = () => {
+  const [showModal, setShowModal] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [pledgeType, setPledgeType] = useState('');
+  const [showThanksModal, setShowThanksModal] = useState(false);
+  const [moneyPledged, setMoneyPledged] = useState(89914);
+  const [backers, setBackers] = useState(5007);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='main-container flex-column'>
+      <Header 
+        menuOpen={menuOpen}
+        setMenuOpen={setMenuOpen}
+      />
+      <MainSection 
+        showModal={showModal} 
+        setShowModal={setShowModal}
+        moneyPledged={moneyPledged}
+        backers={backers}
+        setPledgeType={setPledgeType}
+      />
+      <Modal 
+        pledgeType={pledgeType}
+        setPledgeType={setPledgeType}
+        showModal={showModal} 
+        setShowModal={setShowModal}
+        setShowThanksModal={setShowThanksModal}
+        moneyPledged={moneyPledged}
+        setMoneyPledged={setMoneyPledged}
+        backers={backers}
+        setBackers={setBackers}
+      />
+      <ThanksModal 
+        showThanksModal={showThanksModal}
+        setShowThanksModal={setShowThanksModal}
+      />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
