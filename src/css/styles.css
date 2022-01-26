@@ -606,11 +606,6 @@ body {
   }
 }
 
-.inactive-container {
-  pointer-events: none;
-  opacity: 0.5;
-}
-
 .thanks-modal-container {
   position: absolute;
   width: 35vw;
@@ -669,6 +664,11 @@ body {
   .thanks-modal-container {
     width: 80vw;
   }
+}
+
+.inactive-container {
+  pointer-events: none;
+  opacity: 0.5;
 }
 
 .about-section {

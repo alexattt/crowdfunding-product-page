@@ -1,0 +1,262 @@
+.modal-container {
+  position: absolute;
+  width: 50vw;
+  background-color: white;
+  top: calc(100vh - 20%);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px 30px;
+  background-color: white;
+  box-shadow: 0px 0px 0px 10000px rgba(0,0,0,0.65);
+  border-radius: 5px;
+  z-index: 5;
+
+  .close-modal {
+    margin-left: 98%;
+    height: 15px;
+    width: 15px;
+    cursor: pointer;
+  }
+
+  .modal-title {
+    font-size: 1.25rem;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    font-weight: 700;
+  }
+
+  .modal-desc {
+    font-size: 0.9rem;
+    color: $dark-gray;
+    margin-bottom: 25px;
+  }
+
+  .pledges-container {
+    gap: 20px;
+
+    .pledge-option-container {
+      border: 1px solid rgba(122, 122, 122, 0.2);
+      border-radius: 5px;
+
+      .top-part {
+        padding: 25px;
+
+        input[type="radio"] {
+          margin-right: 15px;
+          appearance: none;
+          background-color: white;
+          border: 1px solid rgba(94, 94, 94, 0.5);
+          min-width: 25px;
+          height: 25px;
+          border-radius: 25px;
+          cursor: pointer;
+          transition: all 0.1s ease-in-out;
+
+          &:checked {
+            background-color: $moderate-cyan;
+            box-shadow: inset 0 0 0 4.5px #fff;
+          }
+
+          &:hover {
+            border: 1px solid $moderate-cyan;
+          }
+        }
+
+        .pledge-details {
+          align-items: baseline;
+
+          @media screen and (max-width: 768px) {
+            flex-direction: column;
+          }
+        }
+
+        .pledge-option-title {
+          font-weight: 700;
+          margin-bottom: 15px;
+          transition: all 0.1s ease-in-out;
+
+          &:hover {
+            cursor: pointer;
+            color: $moderate-cyan;
+          }
+
+          @media screen and (max-width: 768px) {
+            margin-bottom: 5px;
+          }
+        }
+
+        .pledge-amount-info {
+          font-weight: 700;
+          margin-left: 20px;
+          color: $moderate-cyan;
+
+          @media screen and (max-width: 768px) {
+            margin-left: 0px;
+            margin-bottom: 10px;
+          }
+        }
+
+        .amount-left, .amount-left-mobile {
+          margin-right: 0px;
+          margin-left: auto;
+          font-size: 0.9rem;
+          color: $dark-gray;
+          
+          .num-accent {
+            font-weight: 700;
+            font-size: 1.15rem;
+            color: black;
+          }
+        }
+
+        .amount-left {
+          @media screen and (max-width: 768px) {
+            display: none;
+          }
+        }
+
+        .amount-left-mobile {
+          @media screen and (min-width: 768px) {
+            display: none;
+          }
+        }
+
+        .pledge-option-desc {
+          color: $dark-gray;
+          line-height: 25px;
+          font-size: 0.95rem;
+          text-align: justify;
+
+          @media screen and (max-width: 768px) {
+            margin-bottom: 10px;
+          }
+        }
+      }
+      
+      .bottom-part {
+        padding: 10px 25px 15px 25px;
+        justify-content: space-between;
+        align-items: center;
+
+        .continue-btn {
+          padding: 12px 20px;
+          background-color: $moderate-cyan;
+          color: white;
+          font-weight: 500;
+          transition: all 0.1s ease-in-out;
+
+          &:hover {
+            background-color: $dark-cyan;
+          }
+        }
+
+        .enter-pledge {
+          color: $dark-gray;
+          line-height: 25px;
+          font-size: 0.95rem;
+        }
+
+        @media screen and (max-width: 768px) {
+          flex-direction: column;
+          gap: 15px;
+        }
+      }
+
+      .pledge-amount {
+        outline: none;
+        margin-right: 15px;
+        border-radius: 50px;
+        width: 100px;
+        padding: 5px 15px 5px 30px;
+        font-family: $font-family;
+        font-size: 1rem;
+        font-weight: 700;
+        color: black;
+        border: 1px solid $dark-gray;
+        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='20px' width='85px'><text x='12' y='17' fill='gray' font-size='18' font-family='arial'>$</text></svg>");
+        background-repeat: no-repeat;
+        background-position: center left;
+        cursor: pointer;
+
+        &:focus {
+          border: 1px solid $moderate-cyan;
+        }
+      }
+
+      hr {
+        width: 100%;
+        height: 1px;
+        opacity: 0.3;
+      }
+    }
+
+    .active-container {
+      border: 2px solid $moderate-cyan;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    top: 90%;
+    width: 60vw;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 90vw;
+  }
+}
+
+.thanks-modal-container {
+  position: absolute;
+  width: 35vw;
+  background-color: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  background-color: white;
+  box-shadow: 0px 0px 0px 10000px rgba(0,0,0,0.65);
+  border-radius: 5px;
+  z-index: 5;
+
+  .checkmark-icon {
+    height: 60px;
+    width: 60px;
+    margin-bottom: 30px;
+  }
+
+  .modal-desc {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    line-height: 30px;
+    color: $dark-gray;
+    font-size: 0.9rem;
+  }
+
+  .got-it-btn {
+    border: none;
+    padding: 12px 25px;
+    border-radius: 50px;
+    font-family: $font-family;
+    color: white;
+    font-weight: 500;
+    background-color: $moderate-cyan;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+
+    &:hover {
+      background-color: $dark-cyan;
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    width: 80vw;
+  }
+}
+
+.inactive-container {
+  pointer-events: none;
+  opacity: 0.5;
+}
