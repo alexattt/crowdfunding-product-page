@@ -33,7 +33,7 @@ const Header = ({menuOpen, setMenuOpen}) => {
               <img src="/icon-hamburger.svg" alt="hamburger menu" onClick={closeHamburgerMenu}/> }
             {menuOpen ? 
               <div className="nav-items-mobile flex-column">
-                <p className="nav-item-mobile"><a href="#about">About</a></p>
+                <p className="nav-item-mobile" onclick=""><a href="#about">About</a></p>
                 <hr/>
                 <p className="nav-item-mobile">Discover</p>
                 <hr/>
