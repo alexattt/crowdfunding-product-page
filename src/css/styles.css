@@ -101,6 +101,14 @@ body {
   text-decoration: underline;
 }
 
+.header nav .nav-items a {
+  text-decoration: none;
+}
+
+.header nav .nav-items a:focus, .header nav .nav-items a:visited {
+  color: white;
+}
+
 .header nav .burger-menu {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
@@ -146,6 +154,14 @@ body {
   border: 1px solid rgba(122, 122, 122, 0.1);
   margin: 0;
   width: 100%;
+}
+
+.header nav .burger-menu a {
+  text-decoration: none;
+}
+
+.header nav .burger-menu a:focus, .header nav .burger-menu a:visited {
+  color: black;
 }
 
 @media screen and (max-width: 768px) {

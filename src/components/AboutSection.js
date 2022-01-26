@@ -8,7 +8,7 @@ const AboutSection = ({setShowModal, setPledgeType}) => {
   }
 
   return (
-    <div className='about-section flex-column'>
+    <div id="about" className='about-section flex-column'>
       <h3>About this project</h3>
       <p className="about-desc">
         The Mastercraft Bamboo Monitor Riser is a sturdy and stylish platform that elevates your screen 

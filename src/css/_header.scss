@@ -27,6 +27,14 @@
           text-decoration: underline;
         }
       }
+
+      a {
+        text-decoration: none;
+      
+        &:focus, &:visited {
+          color: white;
+        }
+      }
     }
 
     .burger-menu {
@@ -65,6 +73,14 @@
           border: 1px solid rgba(122, 122, 122, 0.1);
           margin: 0;
           width: 100%;
+        }
+      }
+
+      a {
+        text-decoration: none;
+      
+        &:focus, &:visited {
+          color: black;
         }
       }
     }

@@ -22,7 +22,7 @@ const Header = ({menuOpen, setMenuOpen}) => {
         <img src="/logo.svg" alt="logo" />
         {windowWidth > 768 ? 
           <div className="nav-items flex-row">
-            <p className="nav-item">About</p>
+            <p className="nav-item"><a href="#about">About</a></p>
             <p className="nav-item">Discover</p>
             <p className="nav-item">Get Started</p>
           </div>
@@ -33,7 +33,7 @@ const Header = ({menuOpen, setMenuOpen}) => {
               <img src="/icon-hamburger.svg" alt="hamburger menu" onClick={closeHamburgerMenu}/> }
             {menuOpen ? 
               <div className="nav-items-mobile flex-column">
-                <p className="nav-item-mobile">About</p>
+                <p className="nav-item-mobile"><a href="#about">About</a></p>
                 <hr/>
                 <p className="nav-item-mobile">Discover</p>
                 <hr/>
